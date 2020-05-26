@@ -233,5 +233,60 @@
 
 
     
-
+## 20191231 webpack手动配置热更新
+  1.初始化package.json文件和相关文件 npm init -y
+  2.安装webpack和webpack-cli  npm install -D webpack webpack-cli
+  3.创建src目录和index.js文件
+  4.创建webpack.config.js,并编写热部署代码
+  5.安装webpack-dev-server
+    全局安装：npm install webpack-dev-server -g     （一般全局安装后就没问题）
+    局部安装：npm install webpack-dev-server --save-dev
   
+ ```text
+  常用的plugin插件：
+    npm install -D html-webpack-plugin  --用于生成html页面的
+    npm install webpack-dev-server --save-dev --用于热部署的
+    npm install --save-dev extract-text-webpack-plugin  --用于css文件分离的
+    --用于热部署
+    new webpack.HotModuleReplacementPlugin({
+       //options
+    })
+   npm install --save-dev clean-webpack-plugin --自动清除dist目录
+   
+``` 
+  方式二：
+  创建dev-server.js文件
+  
+  
+  
+   
+## 20200102 webpack从开发到上线全套配置
+lesson10文件目录中演示
+1. npm init -y 
+2. 配置文件webpack.dev.config.js和webpack.prod.config.js文件
+4. 安装相关插件：
+    用yarn（yarn add [package]@version）命令或者npm命令
+```text
+   yarn add -D webpack webpack-cli
+   1. html-webpack-plugin
+   2. style-loader
+   3. css-loader 
+   4. less less-loader
+   5. file-loader
+   6. clean-webpack-plugin
+   7. yarn add -D extract-text-webpack-plugin@4.0.0  ( 存在不兼容问题，所以需要配置extract-text-webpack-plugin插件 ）
+   8.npm view extract-text-webpack-plugin versions --查看插件有哪些版本
+     
+    
+```
+5.配置package.json的scripts脚本
+  webpack --config webpack-dev.config.js (配置开发环境)
+  
+6.loader处理是从后向前
+   
+  
+ 
+ 
+ 
+  
+ 
