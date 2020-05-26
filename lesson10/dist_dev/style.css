@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.app {
+  padding: 10px 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
